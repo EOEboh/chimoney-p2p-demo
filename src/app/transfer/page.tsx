@@ -23,19 +23,7 @@ export default function WalletTransferPage() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const res = await fetch("/api/wallet/transfer", {
-      method: "POST",
-      body: JSON.stringify({
-        ...form,
-        receiver: walletId,
-      }),
-    });
-
-    const data = await res.json();
-    setResponse(data);
-  };
+    e.preventDefault(); };
 
   return (
     <div className="p-4 min-h-screen bg-slate-100">
